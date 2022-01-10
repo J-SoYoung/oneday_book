@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+  <!-- Bootstrap Jquery 등 -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> jquery.min에는 뭔가 안되는게 있다-->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/6a99101cff.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../static/css/index.css">
+  
+</head>
+<body>
+  <section class="main">
+    <div class="contain">
+
+      <div class="main_title">
+        <p class="title_day">2021.12.29</p>
+        <p class="title_weekend">월요일</p>
+        <p class="title">오늘<br><i class="fas fa-grip-lines"></i><br>독서</p>
+        <button class="login_btn" onclick="loginHandler()">로그인</button>
+      </div>
+
+      <div class="main_bg">
+        <!-- <img src="../static/img/bg1.jpg"> -->
+        <div class="main_bg_cont">
+          <div class="main_clock">
+            <p>
+              <span class="AMPM">PM</span>
+              <span class="clock">00:00:00</span>
+            </p>
+          </div>
+          <form id="login" class="login_box hidden">
+            <p>'오늘-독서' 로그인</p>
+            <p><input type="text" class="userid" placeholder="닉네임"></p>
+            <button class="login_submit">입장하기</button>
+          </form>
+          <div class="welcome hidden">
+            <p class="wel_title"></p>
+            <p class="move_today moveBtn"><a href="{{url_for('todayBook')}}">오늘의 추천도서</a></p>
+            <p class="move_save moveBtn"><a href="{{url_for('saveBook')}}">MY BOOKLIST</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script src="../static/js/index.js"></script>
+</body>
+</html>

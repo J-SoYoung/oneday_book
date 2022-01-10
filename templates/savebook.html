@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+    <!-- Bootstrap Jquery 등 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> jquery.min에는 뭔가 안되는게 있다-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/6a99101cff.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../static/css/savebook.css">
+</head>
+<body>
+  <nav>
+    <div class="contain">
+      <a href="/"><i class="fas fa-book"></i> 오늘-독서</a>
+      <a href="{{url_for('saveBook')}}" class="nav_username"></a>
+    </div>
+  </nav>
+
+  <section class="save">
+    <div class="contain">
+      <div class="todo_book">
+        <!-- <img src="../static/img/bg1.jpg"> -->
+        <div id="wish_list" class="listbox">
+          <p class="title">
+            <i class="fas fa-ellipsis-h"></i> 읽고 싶은 책 목록 <i class="fas fa-ellipsis-h"></i>
+          </p>
+          <input type="text" placeholder="읽고싶은 책을 써주세요"><i class="plus fas fa-plus"></i>
+          <ul class="todo_booklist">
+            <li class="list">
+              <button>✅</button>
+              <span>책제목책제목입니다</span>
+              <button>❌</button>
+            </li>
+          </ul>
+        </div>
+        <div id="success_list" class="listbox">
+          <p class="title">
+            <i class="fas fa-ellipsis-h"></i> 완독한 책 <i class="fas fa-ellipsis-h"></i>
+          </p>
+          <ul class="todo_booklist">
+            <li class="list">
+              <button>✅</button>
+              <span>책제목책제목입니다</span>
+              <button>❌</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="review_book">
+        <h3 class="save_title">읽은 책은 저장소에</h3>
+        <div class="search_bar">
+          <input class="searchBar_input" type="text" placeholder="책 검색하기">
+          <i class="fas fa-search" onclick="searchBar()" ></i>
+        </div>
+        <div class="input_box">
+          <div class="input_img">
+<!--        <img class="input_img_result" src="../static/img/ex1.jpg">-->
+          </div>
+          <div class="input_info">
+            <p class="info_title">도서명 : <span class="info_title_text"></span></p>
+            <p class="info_score">평점 <span>☆☆☆☆☆</span></p>
+            <textarea class="info_review" placeholder="한줄 소감을 적어주세요"></textarea>
+          </div>
+          <button class="input_button" onclick="reviewSave()">저장</button>
+        </div>
+        <h3 class="save_title">MY BOOKLIST</h3>
+        <div class="review_card">
+          <div class="card">
+            <img src="../static/img/ex1.jpg">
+            <div class="card_cont">
+              <div class="card_info">
+                <div class="card_book">
+                  <p class="title">책제목</p>
+                  <p class="score">평점</p>
+                </div>
+                <button class="card_del" onclick="deleteCard('책제목')">del</button>
+              </div>
+              <div class="card_review">
+                <p class="review_tit">한줄평</p>
+                <p class="review_text">한줄평 작성하면 오는 곳 한줄평 작성하면 오는 곳 한줄평 작성하면 오는 곳 한줄평 작성하면 오는 곳 한줄평 작성하면 오는 곳</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../static/js/savebook.js"></script>
+</body>
+</html>

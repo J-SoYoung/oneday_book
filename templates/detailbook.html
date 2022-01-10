@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+    <!-- Bootstrap Jquery 등 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> jquery.min에는 뭔가 안되는게 있다-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/6a99101cff.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../static/css/detailbook.css">
+</head>
+<body>
+  <nav>
+    <div class="contain">
+      <a href="/"><i class="fas fa-book"></i> 오늘-독서</a>
+      <a href="{{url_for('saveBook')}}" class="nav_username"></a>
+    </div>
+  </nav>
+  <section class="detail">
+    <div class="contain">
+      <div class="detail_book">
+        <div class="detail_url">
+          <p>도서 구매하기</p>
+          <a href="#">페이지 이동</a>
+        </div>
+        <div class="detail_img"><img src="../static/img/ex1.jpg"></div>
+        <div class="detail_info">
+          <p class="name">도서명</p>
+          <p class="author">저자</p>
+          <p class="text">줄거리
+          <p class="text_cont"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Earum assumenda consectetur minima dolor recusandae, possimus doloribus quas
+            molestiasLorem ipsum dolor sit, amet consectetur adipisicing elit. Earum assumenda consectetur minima dolor
+            recusandae, possimus doloribus quas molestias</p></p>
+        </div>
+      </div>
+    </div>
+    <div class="detail_review_input">
+      <div class="contain">
+        <div class="review_input_name">
+          <p>닉네임</p>
+          <input class="text" type="text" placeholder="닉네임을 입력해주세요">
+        </div>
+        <div class="review_input_text">
+          <p>리뷰</p>
+          <textarea class="text" placeholder="리뷰를 입력해주세요"></textarea>
+        </div>
+        <button class="review_save">리뷰 저장하기</button>
+      </div>
+    </div>
+    <div class="detail_review_card">
+      <div class="contain">
+        <div class="review_card">
+          <p class="name">닉네임</p>
+          <p class="review">리뷰 내용입니다 리뷰내용입니다</p>
+          <button class="btn">좋아요<span>1</span></button>
+        </div>
+        <div class="review_card">
+          <p class="name">닉네임</p>
+          <p class="review">리뷰 내용입니다 리뷰내용입니다</p>
+          <button class="btn">좋아요<span>1</span></button>
+        </div>
+        <div class="review_card">
+          <p class="name">닉네임</p>
+          <p class="review">리뷰 내용입니다 리뷰내용입니다</p>
+          <button class="btn">좋아요<span>1</span></button>
+        </div>
+        <div class="review_card">
+          <p class="name">닉네임</p>
+          <p class="review">리뷰 내용입니다 리뷰내용입니다</p>
+          <button class="btn">좋아요<span>1</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
