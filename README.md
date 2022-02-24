@@ -31,7 +31,8 @@
 ## 추천 페이지
 - 오늘 추천도서 -> python 웹스크래핑으로 도서목록 가져와서 보여줌 
 - 아래 추천도서 리스트 -> 좋아요 기능으로 숫자가 높은 순으로 정렬됨
-![image](https://user-images.githubusercontent.com/85012454/155479644-d4bde747-7b48-4900-ace4-37b5a83257e2.png)
+![image](https://user-images.githubusercontent.com/85012454/155480445-79ba743e-e70d-4d6d-834c-166b4b641b71.png)
+
 
 
 ## MyBOOK 페이지
