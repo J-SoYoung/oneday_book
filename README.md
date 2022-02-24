@@ -24,8 +24,8 @@
 ## 메인화면
  - 랜덤한 배경, 시간 / 날짜 자동입력
  - storage에 간단하게 닉네임만 저장해두고, 닉네임 맞으면 패스
+![image](https://user-images.githubusercontent.com/85012454/155480329-6ce5a0bc-5ac0-4831-85b4-1b452f493f4f.png)
 
-![image](https://user-images.githubusercontent.com/85012454/155479569-066e5e36-5273-4d87-8b42-99dd9e3d4aea.png)
 
 
 ## 추천 페이지
